@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import chefs from './../chefs.js';
 import { Chef } from './chef';
+import { Observable, of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -11,8 +12,8 @@ export class ChefsService {
 
   constructor() { }
 
-  getChefs(): Chef[] {
-    return [ ... this.chefs];
+  getChefs():Observable<Chef[]> {
+    return of(chefs);
   }
 
   setCallbacks(callback: Function): void {

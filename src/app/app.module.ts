@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { ProfileComponent } from './profile/profile.component';
 import { AddChefFormComponent } from './add-chef-form/add-chef-form.component';
 import { FormsModule , ReactiveFormsModule} from '@angular/forms';
+import { ProfileListComponent } from './profile-list/profile-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProfileComponent,
-    AddChefFormComponent
+    AddChefFormComponent,
+    ProfileListComponent
   ],
   imports: [
     BrowserModule,

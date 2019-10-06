@@ -1,0 +1,7 @@
+<app-profile
+*ngFor="let chef of chefs"
+[style.font-weight]="selection === chef.name ?   'bold' : ''"
+[name]="chef.name"
+[email]="chef.email"
+(profileSelected)="handleProfileClick($event)"
+></app-profile>

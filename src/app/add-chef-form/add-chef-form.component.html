@@ -1,0 +1,21 @@
+<form [formGroup]="addChefFormGroup" (ngSubmit)="addChef()">
+    <label>
+        First name:
+        <input formControlName="name" type="text">
+        <div
+        *ngIf="addChefFormGroup.controls.email.touched && addChefFormGroup.controls.name.status === 'INVALID'">
+            That's not a name!
+        </div>
+    </label>
+    <label>
+        Email:
+        <input formControlName="email" type="text">
+        <div
+        *ngIf="addChefFormGroup.controls.email.touched && addChefFormGroup.controls.email.status === 'INVALID'">   
+        That's not an email!
+        </div>
+    </label>
+    <label>
+        <input type="submit">
+    </label>
+<form>
